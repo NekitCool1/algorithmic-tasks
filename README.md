@@ -1,4 +1,4 @@
 # algorithmic-tasks
 
 28.07
-[Cat years, Dog years](https://www.codewars.com/kata/5a6d3bd238f80014a2000187)
+[Camel case](https://www.codewars.com/kata/517abf86da9663f1d2000003/train/java)
