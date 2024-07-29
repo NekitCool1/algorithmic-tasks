@@ -11,12 +11,12 @@ public class CountingDuplicates {
     for (char c : text.toCharArray()) {
       charCount.put(c, charCount.getOrDefault(c, 0) + 1);
     }
-    for (Integer count : charCount.values()) {
-      if (count > 1) {
-        temp++;
-      }
-    }
-    return temp;
+    long count = charCount.values().stream()
+            .filter(c -> c > 1)
+            .count();
+
+    System.out.println(charCount);
+    return (int) count;
   }
 
   public static void main(String[] args) {

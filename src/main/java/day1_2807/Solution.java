@@ -6,14 +6,10 @@ import java.util.Arrays;
 public class Solution{
 
     static String toCamelCase(String s){
-        StringBuilder sb = new StringBuilder();
         String[] split = s.split("[-_]");
-        for (int i = 0; i < split.length; i++) {
-            if (i == 0) {
-                sb.append(split[i]);
-            } else {
-                sb.append(split[i].replace(split[i].charAt(0), Character.toUpperCase(split[i].charAt(0))));
-            }
+        StringBuilder sb = new StringBuilder(split[0]);
+        for (int i = 1; i < split.length; i++) {
+            sb.append(split[i].replace(split[i].charAt(0), Character.toUpperCase(split[i].charAt(0))));
         }
         return sb.toString();
     }
