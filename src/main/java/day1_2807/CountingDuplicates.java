@@ -5,7 +5,6 @@ import java.util.HashMap;
 //https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/java
 public class CountingDuplicates {
   public static int duplicateCount(String text) {
-    int temp = 0;
     text = text.toLowerCase();
     HashMap<Character, Integer> charCount = new HashMap<>();
     for (char c : text.toCharArray()) {
@@ -15,7 +14,6 @@ public class CountingDuplicates {
             .filter(c -> c > 1)
             .count();
 
-    System.out.println(charCount);
     return (int) count;
   }
 

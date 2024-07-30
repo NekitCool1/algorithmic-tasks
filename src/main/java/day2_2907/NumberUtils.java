@@ -4,16 +4,11 @@ package day2_2907;
 public class NumberUtils {
 
     public static boolean isNarcissistic(int number) {
-        int sum = 0;
         String s = String.valueOf(number);
-        int power = s.length();
-        for (int i = 0; i < s.length(); i++) {
-            sum += (int) Math.pow(Integer.parseInt(String.valueOf(s.charAt(i))), power);
-        }
-        return number == sum;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isNarcissistic(153));
+        int sum = s.chars()
+                .map(Character::getNumericValue)
+                .map(n -> (int) Math.pow(n, s.length()))
+                .sum();
+        return sum == number;
     }
 }
