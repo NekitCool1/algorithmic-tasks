@@ -1,11 +1,9 @@
 package day3_3007;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
 import java.util.stream.IntStream;
 
+//https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/java
 public class Kata {
   public static int[] sortArray(int[] array) {
     int temp = 0;
